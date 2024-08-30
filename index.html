@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Price Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gold Price Calculator</h1>
+    <form id="goldCalculator">
+      <div class="input-group">
+        <label for="carat">Gold Carat (e.g., 18):</label>
+        <input type="number" id="carat" name="carat" required min="1" max="24">
+      </div>
+      <div class="input-group">
+        <label for="weight">Gold Weight (grams):</label>
+        <input type="number" id="weight" name="weight" required min="0.1" step="0.1">
+      </div>
+      <div class="input-group">
+        <label for="pricePerGram">Gold Price per Gram (PKR):</label>
+        <input type="number" id="pricePerGram" name="pricePerGram" required>
+      </div>
+      <div class="input-group">
+        <label for="gst">GST (%) in your country:</label>
+        <input type="number" id="gst" name="gst" required min="0" step="0.1">
+      </div>
+      <div class="input-group">
+        <label for="makingCost">Making Cost (PKR):</label>
+        <input type="number" id="makingCost" name="makingCost" required min="0" step="0.1">
+      </div>
+      <button type="button" id="submitBtn">Calculate</button>
+    </form>
+    <div id="result"></div>
+    
+    <!-- Carat Chart -->
+    <div class="carat-chart">
+        <h2>Gold Carat Chart</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Carat</th>
+              <th>Code Number</th>
+              <th>Purity (%)</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>24K</td>
+              <td>999</td>
+              <td>99.9%</td>
+              <td>Pure Gold</td>
+            </tr>
+            <tr>
+              <td>22K</td>
+              <td>916</td>
+              <td>91.6%</td>
+              <td>Commonly used in jewelry</td>
+            </tr>
+            <tr>
+              <td>21K</td>
+              <td>875</td>
+              <td>87.5%</td>
+              <td>High-quality jewelry</td>
+            </tr>
+            <tr>
+              <td>18K</td>
+              <td>750</td>
+              <td>75%</td>
+              <td>Standard for fine jewelry</td>
+            </tr>
+            <tr>
+              <td>14K</td>
+              <td>583</td>
+              <td>58.3%</td>
+              <td>Popular in the US</td>
+            </tr>
+            <tr>
+              <td>10K</td>
+              <td>417</td>
+              <td>41.7%</td>
+              <td>Lowest standard for gold jewelry</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
